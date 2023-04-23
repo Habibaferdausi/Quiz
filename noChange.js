@@ -104,6 +104,8 @@ const displayAnswers = (data) => {
   });
 };
 
+// এই পুরো ফাইলে কেও কোন কিছু পরিবর্তন করবেন না । এইখানে কোন Bug নেই ।
+
 const showAnswers = (data) => {
   // এই পুরো ফাইলে কেও কোন কিছু পরিবর্তন করবেন না । এইখানে কোন Bug নেই ।
   const quizContainer = document.querySelector("#quizContainer");
@@ -126,3 +128,5 @@ const showAnswers = (data) => {
         </div>`;
   });
 };
+
+// এই পুরো ফাইলে কেও কোন কিছু পরিবর্তন করবেন না । এইখানে কোন Bug নেই ।

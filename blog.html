@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              common: ["Rubik", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-white font-common">
+    <!-- Header/Navbar section start -->
+    <header class="h-16 flex items-center shadow-sm">
+      <nav class="flex justify-between items-center w-9/12 mx-auto">
+        <div class="text-zinc-800 font-bold uppercase">
+          <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+          <p class="text-[10px] font-normal capitalize -mt-1">
+            Get ready to Quiz and be amazed!
+          </p>
+        </div>
+
+        <a
+          class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white"
+          href="index.html"
+          >Home</a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <!--question and answer-->
+      <section class="ml-9 mt-10 pl-6 pt-5 mr-9">
+        <div class="p-6 bg-orange-200">
+          <h1 class="text-gray-900 font-bold mb-4">
+            Q1. Difference between map, filter, forEach and find?
+          </h1>
+          <h2 class="text-green-900 font-semibold">
+            Ans: <span class="text-gray-900">`map`:</span> The map() method
+            creates a new array with the results of calling a provided function
+            on every element in the calling array.<br />
+            The original array is not modified. The function passed to map()
+            should return a new value, which will be added to the new array.
+            <br />
+            <br />
+            <span class="text-gray-900">`forEach : `</span> .forEach(), is used
+            to execute the same code on every element in an array but does not
+            change the array and it returns undefined.<br />The function does
+            not return a value. It simply performs some operation on each
+            element of the array.
+            <br />
+            <br />
+            <span class="text-gray-900">`filter: `</span> The filter() method
+            creates a new array with all elements that pass the test implemented
+            by the provided function. <br />The original array is not modified.
+            The function passed to filter() should return a boolean value,<br />
+            indicating whether or not the element should be included in the new
+            array.
+            <br />
+            <br />
+            <span class="text-gray-900">`find: `</span>The find() method returns
+            the value of the first element in the array that satisfies the
+            provided testing function. Otherwise,<br />
+            undefined is returned. The original array is not modified. The
+            function passed to find() should return a boolean value,<br />
+            indicating whether or not the element satisfies the search criteria.
+          </h2>
+        </div>
+
+
+        <div class="p-6 mt-10 bg-purple-200">
+        <h1 class=" text-gray-900 font-bold">
+          Q2.Difference between local storage session storage and cookies?
+        </h1>
+        <h2 class="text-green-900 font-semibold  mt-4">
+          Ans:Local storage is useful for storing data that the user will need
+          to access later, such as offline data.<br />
+          Session storage is a great way to improve the performance of your web
+          applications.<br />
+          Cookies are a good choice for storing data that should not be
+          persisted for a long time, such as session IDs.
+          <br>
+          <br>Difference:
+          <br>
+          <br>
+          <u>Data storage: </u> Cookies, local storage, and session storage all have different limits on the amount of data they can store. Cookies are limited to 4KB of data, while local storage and session storage can store up to 10MB of data.
+<br>
+<u>Data expiration: </u>Cookies can have an expiration date set, while local storage and session storage do not. This means that cookies can persist even after the browser is closed, while local storage and session storage will be cleared when the browser is closed.
+<br>
+ <u>Data accessibility: </u>Cookies can be accessed by both the server and the client-side scripts, while local storage and session storage can only be accessed by the client-side scripts.
+<br>
+<u>Data transmission:</u> Cookies are automatically sent with every HTTP request, while local storage and session storage are not. This means that cookies can be used to send data to the server with every request, while local storage and session storage are only accessible on the client-side.
+      <br>  </h2>
+      </div>
+      <div class="p-6 mt-10 bg-blue-200">
+        <h1 class="mt-2 text-gray-900 font-bold">
+          Q3.How the event loop works in JavaScript?
+          <h2 class="text-green-900 font-semibold mt-4">
+            Ans : JavaScript maintains two main data structures: the Call Stack
+            and the Event Queue.<br />
+            When the JavaScript engine executes a function, it adds it to the
+            Call Stack.<br />
+            If the function returns a value, it is popped off the Call Stack.<br />
+            If the function initiates an asynchronous operation, the operation
+            is offloaded to a separate thread, and the function is popped off
+            the Call Stack.
+            <br />
+            When the asynchronous operation is complete, a corresponding event
+            is added to the Event Queue.<br />
+            The Event Loop continuously checks the Event Queue and adds any
+            events to the Call Stack.<br />
+            If the Call Stack is empty, the Event Loop pops the next event off
+            the Event Queue and adds it to the Call Stack.<br />
+            The corresponding function associated with the event is then
+            executed.
+          </h2>
+        </div>
+
+        <div class = "p-6 mt-10 bg-red-200">
+        </h1>
+        <h1 class="mt-3  text-gray-900 font-bold">Q4.What quiz timer function do ?</h1>
+        <h2 class="text-green-900 font-semibold mt-4">
+          Ans: A quiz timer is a feature that can be implemented to limit the
+          amount of time a user has to complete a quiz.<br />
+          In Js Code quizTimer takes one parameter called dismiss, which is a boolean value that determines whether to stop or start the timer.<br>
+
+          When the dismiss parameter is true, the function stops the timer by calling clearInterval on the timer variable and then returns from the function.<br>
+          When the dismiss parameter is false, the function starts the timer by calling setInterval and passing in a callback function that will run every second.
+          
+          Inside the callback function, the function updates the time display by calculating the minutes and seconds from the count variable, which increments every second. The function also checks whether the count variable has reached 60 seconds and alternates the color of the timer text every 2 seconds.
+        </h2>
+      </div>
+      <div class="p-6 mt-10 bg-yellow-200 mb-11">
+        <h1 class="mt-3 text-gray-900 font-bold">Q5.What choose quiz function do ?</h1>
+        <h2 class="text-green-900 font-semibold mt-4">Ans : If a website offers quizzes on different topics, the "choose quiz" function would allow the user to select which topic they want to be quizzed on.<br>
+         <br> The "choose quiz" function first checks if an object with the same id as the current quiz exists in an array called answers. <br>
+         If it does, the function updates the object's givenAns property with the new answer provided.<br>
+          If it doesn't exist, the function creates a new object with the quiz information and answer provided and pushes it to the answers array.<br>
+          
+
+After updating or pushing the new answer to the answers array, the function calls another function called displayAnswers and passes the updated answers array to it.</h2>
+      </div>
+      </section>
+    </main>
+  </body>
+</html>
