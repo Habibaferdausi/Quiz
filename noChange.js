@@ -1,6 +1,3 @@
-// এই পুরো ফাইলে কেও কোন কিছু পরিবর্তন করবেন না । এইখানে কোন Bug নেই ।
-
-// Handle Timer
 const quizTimer = (dismiss) => {
   if (dismiss) {
     clearInterval(timer);
@@ -29,7 +26,6 @@ const quizTimer = (dismiss) => {
   }, 1000);
 };
 
-// display quiz options
 const displayQuizOptions = (quiz, i) => {
   let serial = 1;
   let generatedOptions = "";
@@ -64,7 +60,7 @@ const chooseQuiz = (index, givenAns) => {
 };
 
 const displayAnswers = (data) => {
-  // এই পুরো ফাইলে কেও কোন কিছু পরিবর্তন করবেন না । এইখানে কোন Bug নেই ।
+
   answersContainer.innerHTML = "";
   data = data.sort((a, b) => a.id - b.id);
   data.forEach((answer, idx) => {
@@ -104,10 +100,9 @@ const displayAnswers = (data) => {
   });
 };
 
-// এই পুরো ফাইলে কেও কোন কিছু পরিবর্তন করবেন না । এইখানে কোন Bug নেই ।
+
 
 const showAnswers = (data) => {
-  // এই পুরো ফাইলে কেও কোন কিছু পরিবর্তন করবেন না । এইখানে কোন Bug নেই ।
   const quizContainer = document.querySelector("#quizContainer");
   quizContainer.innerHTML = "";
   data = data.sort((a, b) => a.id - b.id);
@@ -128,5 +123,3 @@ const showAnswers = (data) => {
         </div>`;
   });
 };
-
-// এই পুরো ফাইলে কেও কোন কিছু পরিবর্তন করবেন না । এইখানে কোন Bug নেই ।
